@@ -1,6 +1,6 @@
 .header {
   nav {
-    padding: toRem($navPadding);;
+    padding: toRem(17) toRem(24);
 
   }
 
@@ -29,11 +29,33 @@
 
   &__links {
     a {
+      position: relative;
       font-size: $font-sm;
       color: $grayishBlue;
+      transition: color 300ms ease-in-out;
 
       &:not(:last-child){
         margin-right: 32px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        background: linear-gradient(to right, $limeGreen, $brightCyan);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+
+      &:hover {
+        color: $darkBlue;
+
+        &::before {
+          opacity: 1;
+        }
       }
     }
   }
@@ -41,5 +63,10 @@
   &__cta {
     font-size: $font-sm;
     color: $white;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+      opacity: 0.75;
+    }
   }
 }
