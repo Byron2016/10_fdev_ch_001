@@ -1,0 +1,28 @@
+.header {
+  nav {
+    padding: toRem($navPadding);;
+
+  }
+
+  &__logo {
+    img {
+      
+    }
+
+  }
+
+  &__menu {
+    > span {
+      display: block;
+      width: toRem($hamAncho);
+      height: toRem($hamAlto);
+
+      background-color: $darkBlue;
+
+      &:not(:last-child){
+        margin-bottom: toRem($hamMarbotton);
+      }
+    }
+
+  }
+}
