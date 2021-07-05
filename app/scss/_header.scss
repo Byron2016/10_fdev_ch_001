@@ -1,4 +1,32 @@
 .header {
+  
+  // Hamburger Open Styles
+  &.open {
+    .header__menu {
+      > span:first-child{
+        transform: rotate(45deg);
+      }
+    
+      > span:nth-child(2){
+        opacity: 0;
+      }
+    
+      > span:last-child{
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    top: toRem(60);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // background-color: $darkBlue;
+    background-image: linear-gradient($darkBlue, transparent);
+  }
+  
   nav {
     padding: toRem(17) toRem(24);
 
@@ -26,34 +54,19 @@
         margin-bottom: toRem($hamMarbotton);
       }
     }
-
-    &.open {
-      > span:first-child{
-        transform: rotate(45deg);
-      }
-
-      > span:nth-child(2){
-        opacity: 0;
-      }
-
-      > span:last-child{
-        transform: rotate(-45deg);
-      }
-    }
-
   }
-
+  
   &__links {
     a {
       position: relative;
       font-size: $font-sm;
       color: $grayishBlue;
       transition: color 300ms ease-in-out;
-
+      
       &:not(:last-child){
         margin-right: 32px;
       }
-
+      
       &::before {
         content: "";
         position: absolute;
@@ -65,24 +78,25 @@
         opacity: 0;
         transition: opacity 300ms ease-in-out;
       }
-
+      
       &:hover {
         color: $darkBlue;
-
+        
         &::before {
           opacity: 1;
         }
       }
     }
   }
-
+  
   &__cta {
     font-size: $font-sm;
     color: $white;
     transition: opacity 300ms ease-in-out;
-
+    
     &:hover {
       opacity: 0.75;
     }
   }
+  
 }
