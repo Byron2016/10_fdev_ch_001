@@ -48,3 +48,19 @@ button, .button {
   font-weight: 700;
   background: linear-gradient(to right, $limeGreen, $brightCyan);
 }
+
+// Visibility
+.hide-for-mobile {
+  //llamar al mixin
+  @include breakpoint-down (medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  //llamar al mixin
+  @include breakpoint-up (large) {
+    display: none;
+  }
+}
+

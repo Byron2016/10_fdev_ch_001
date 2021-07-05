@@ -1,0 +1,25 @@
+// Breakpoints
+//64*16=1024
+@media (min-width: 64em) {
+  // styles go here
+}
+
+// Sass map
+//640/16:40em 1024/16:64em 1400/16:87.5em
+$breakpints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+
+// 639px 1023px 1399px
+$breakpints-down: ( "small": "39.937em", "medium": "63.937em", "large": "87.4375em");
+
+// Crear el mixin
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($map: $breakpints-up, $key: $size )) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($map: $breakpints-down, $key: $size )) {
+    @content;
+  }
+}
