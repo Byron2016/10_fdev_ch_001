@@ -1,3 +1,13 @@
+// 
+$tamBase: 16;
+
+// Funciones
+
+@function toRem($value) {
+  $remValue: ($value / $tamBase) + rem; 
+  @return $remValue;
+}
+
 // Colors
 
 $darkBlue: hsl(233, 26%, 24%);
@@ -9,21 +19,21 @@ $lightGrayishBlue: hsl(220, 16%, 96%);
 $veryLightGray: hsl(0, 0%, 98%);
 $White: hsl(0, 0%, 100%);
 
-// 
-$tamBase: 16;
+
+
+// Body
+$fontSize: 18;
 
 // Nav
 $navPadding: 24;
+$deskFontSizeLink: 14;
 
 // Hamburguesa
 $hamAlto: 2;
 $hamAncho: 26;
 $hamMarbotton: 3;
 
+// Font Sizes
+$font-sm: toRem($deskFontSizeLink);
+$font-med: toRem($fontSize);
 
-// Funciones
-
-@function toRem($value) {
-  $remValue: ($value / $tamBase) + rem; 
-  @return $remValue;
-}
