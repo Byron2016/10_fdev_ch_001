@@ -1,1 +1,10 @@
-console.log('Hola mundo');
+const btnHamburger = document.querySelector("#btnHamburger");
+btnHamburger.addEventListener('click', function(){
+  console.log("aa")
+  if(btnHamburger.classList.contains('open')){
+    btnHamburger.classList.remove('open')
+  }
+  else {
+    btnHamburger.classList.add('open')
+  }
+})
