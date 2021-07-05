@@ -20,7 +20,7 @@
   .overlay {
     opacity: 0;
     position: fixed;
-    top: toRem(60);
+    top: 0; // Evita el scroll
     right: 0;
     bottom: 0;
     left: 0;
@@ -30,8 +30,10 @@
   }
   
   nav {
-    padding: toRem(17) toRem(24);
-
+    position: relative;
+    background-color: $white;
+    padding-top: toRem(17);
+    padding-bottom: toRem(17);
   }
 
   &__logo {
@@ -55,6 +57,24 @@
       &:not(:last-child){
         margin-bottom: toRem($hamMarbotton);
       }
+    }
+  }
+
+  &__menu {
+    position: absolute;          // para centrar post absolute
+    width: calc(100% - 3rem);    // para centrar post absolute
+    left: 50%;                   // para centrar post absolute
+    transform: translateX(-50%); // para centrar post absolute
+    background: $white;
+    margin-top: toRem(24);
+    padding: toRem(26);
+    border-radius: 5px;
+
+    a {
+      display: block;
+      color: $darkBlue; 
+      padding: toRem(10);
+      text-align: center;
     }
   }
   
