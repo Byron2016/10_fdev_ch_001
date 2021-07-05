@@ -48,7 +48,7 @@ a, a:visited, a:hover {
 }
 
 button, .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 2.1875rem;
   border: 0;
   border-radius: 50px;
   cursor: pointer;
@@ -74,6 +74,11 @@ button, .button {
   padding: 1.5rem;
 }
 
+.header__logo img {
+  width: 8.8125rem;
+  height: 1.375rem;
+}
+
 .header__menu > span {
   display: block;
   width: 1.625rem;
@@ -88,6 +93,10 @@ button, .button {
 .header__links a {
   font-size: 0.875rem;
   color: #9698a6;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
 }
 
 .header__cta {

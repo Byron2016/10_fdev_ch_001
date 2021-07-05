@@ -6,7 +6,8 @@
 
   &__logo {
     img {
-      
+      width: toRem(141);
+      height: toRem(22);
     }
 
   }
@@ -30,6 +31,10 @@
     a {
       font-size: $font-sm;
       color: $grayishBlue;
+
+      &:not(:last-child){
+        margin-right: 32px;
+      }
     }
   }
 
